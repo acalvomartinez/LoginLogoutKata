@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E2010A2E4B9A92135CDF0E5 /* Pods_LoginLogoutKataTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0619651EC0AE779C027A76C7 /* Pods_LoginLogoutKataTests.framework */; };
 		E2CD6D001EA9E885002E4F22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CD6CFF1EA9E885002E4F22 /* AppDelegate.swift */; };
 		E2CD6D021EA9E885002E4F22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CD6D011EA9E885002E4F22 /* ViewController.swift */; };
 		E2CD6D051EA9E885002E4F22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2CD6D031EA9E885002E4F22 /* Main.storyboard */; };
@@ -26,6 +27,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0619651EC0AE779C027A76C7 /* Pods_LoginLogoutKataTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginLogoutKataTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9555591F6F7F8A790BA5385F /* Pods_LoginLogoutKata.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginLogoutKata.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C45E7850FCA9F7538A4B5135 /* Pods-LoginLogoutKataTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginLogoutKataTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoginLogoutKataTests/Pods-LoginLogoutKataTests.release.xcconfig"; sourceTree = "<group>"; };
 		E2CD6CFC1EA9E885002E4F22 /* LoginLogoutKata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginLogoutKata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2CD6CFF1EA9E885002E4F22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2CD6D011EA9E885002E4F22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +40,7 @@
 		E2CD6D101EA9E885002E4F22 /* LoginLogoutKataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginLogoutKataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2CD6D141EA9E885002E4F22 /* LoginLogoutKataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginLogoutKataTests.swift; sourceTree = "<group>"; };
 		E2CD6D161EA9E885002E4F22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E99F8F0594E769CE2583F769 /* Pods-LoginLogoutKataTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginLogoutKataTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoginLogoutKataTests/Pods-LoginLogoutKataTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,18 +55,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E2010A2E4B9A92135CDF0E5 /* Pods_LoginLogoutKataTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		886A41C0D6327AC6F8248CB8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9555591F6F7F8A790BA5385F /* Pods_LoginLogoutKata.framework */,
+				0619651EC0AE779C027A76C7 /* Pods_LoginLogoutKataTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A92BC77F8C30051B4D3ADA13 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E99F8F0594E769CE2583F769 /* Pods-LoginLogoutKataTests.debug.xcconfig */,
+				C45E7850FCA9F7538A4B5135 /* Pods-LoginLogoutKataTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E2CD6CF31EA9E885002E4F22 = {
 			isa = PBXGroup;
 			children = (
 				E2CD6CFE1EA9E885002E4F22 /* LoginLogoutKata */,
 				E2CD6D131EA9E885002E4F22 /* LoginLogoutKataTests */,
 				E2CD6CFD1EA9E885002E4F22 /* Products */,
+				A92BC77F8C30051B4D3ADA13 /* Pods */,
+				886A41C0D6327AC6F8248CB8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,9 +146,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E2CD6D1C1EA9E885002E4F22 /* Build configuration list for PBXNativeTarget "LoginLogoutKataTests" */;
 			buildPhases = (
+				1575963E9EDB13F0584FF61B /* [CP] Check Pods Manifest.lock */,
 				E2CD6D0C1EA9E885002E4F22 /* Sources */,
 				E2CD6D0D1EA9E885002E4F22 /* Frameworks */,
 				E2CD6D0E1EA9E885002E4F22 /* Resources */,
+				0C5F4DC0159890C2750B7512 /* [CP] Embed Pods Frameworks */,
+				D66D06DC9399977DFA4A7084 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -195,6 +224,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C5F4DC0159890C2750B7512 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoginLogoutKataTests/Pods-LoginLogoutKataTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1575963E9EDB13F0584FF61B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D66D06DC9399977DFA4A7084 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoginLogoutKataTests/Pods-LoginLogoutKataTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E2CD6CF81EA9E885002E4F22 /* Sources */ = {
@@ -367,8 +444,9 @@
 		};
 		E2CD6D1D1EA9E885002E4F22 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E99F8F0594E769CE2583F769 /* Pods-LoginLogoutKataTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 2HZ94W43L6;
 				INFOPLIST_FILE = LoginLogoutKataTests/Info.plist;
@@ -382,8 +460,9 @@
 		};
 		E2CD6D1E1EA9E885002E4F22 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C45E7850FCA9F7538A4B5135 /* Pods-LoginLogoutKataTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 2HZ94W43L6;
 				INFOPLIST_FILE = LoginLogoutKataTests/Info.plist;
