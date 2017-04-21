@@ -21,8 +21,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        logoutButton.isHidden = UserDefaults.standard.bool(forKey: "isLoggedUser")
-        logInViewContainer.isHidden = !UserDefaults.standard.bool(forKey: "isLoggedUser")
+        logoutButton.isHidden = !UserDefaults.standard.bool(forKey: "isLoggedUser")
+        logInViewContainer.isHidden = UserDefaults.standard.bool(forKey: "isLoggedUser")
     }
 
     @IBAction func loginButtonPressed(_ sender: Any) {
@@ -43,14 +43,12 @@ extension ViewController: LogInCompletionHandler {
         self.present(alert, animated: true, completion: nil)
         
         UserDefaults.standard.set(false, forKey: "isLoggedUser")
-        UserDefaults.standard.synchronize()
     }
     
     func onLogInSuccess() {
         logoutButton.isHidden = false
         logInViewContainer.isHidden = true
         UserDefaults.standard.set(true, forKey: "isLoggedUser")
-        UserDefaults.standard.synchronize()
     }
 }
 
@@ -59,7 +57,6 @@ extension ViewController: LogOutCompletionHandler {
         logoutButton.isHidden = false
         
         UserDefaults.standard.set(true, forKey: "isLoggedUser")
-        UserDefaults.standard.synchronize()
     }
     
     func onLogOutSuccess() {
@@ -68,6 +65,5 @@ extension ViewController: LogOutCompletionHandler {
         emailTextField.text = ""
         passTextField.text = ""
         UserDefaults.standard.set(false, forKey: "isLoggedUser")
-        UserDefaults.standard.synchronize()
     }
 }
