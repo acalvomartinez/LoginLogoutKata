@@ -1,0 +1,427 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E2CD6D001EA9E885002E4F22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CD6CFF1EA9E885002E4F22 /* AppDelegate.swift */; };
+		E2CD6D021EA9E885002E4F22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CD6D011EA9E885002E4F22 /* ViewController.swift */; };
+		E2CD6D051EA9E885002E4F22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2CD6D031EA9E885002E4F22 /* Main.storyboard */; };
+		E2CD6D071EA9E885002E4F22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2CD6D061EA9E885002E4F22 /* Assets.xcassets */; };
+		E2CD6D0A1EA9E885002E4F22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2CD6D081EA9E885002E4F22 /* LaunchScreen.storyboard */; };
+		E2CD6D151EA9E885002E4F22 /* LoginLogoutKataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CD6D141EA9E885002E4F22 /* LoginLogoutKataTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E2CD6D111EA9E885002E4F22 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2CD6CF41EA9E885002E4F22 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2CD6CFB1EA9E885002E4F22;
+			remoteInfo = LoginLogoutKata;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E2CD6CFC1EA9E885002E4F22 /* LoginLogoutKata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginLogoutKata.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2CD6CFF1EA9E885002E4F22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E2CD6D011EA9E885002E4F22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E2CD6D041EA9E885002E4F22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E2CD6D061EA9E885002E4F22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E2CD6D091EA9E885002E4F22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E2CD6D0B1EA9E885002E4F22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2CD6D101EA9E885002E4F22 /* LoginLogoutKataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginLogoutKataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2CD6D141EA9E885002E4F22 /* LoginLogoutKataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginLogoutKataTests.swift; sourceTree = "<group>"; };
+		E2CD6D161EA9E885002E4F22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E2CD6CF91EA9E885002E4F22 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2CD6D0D1EA9E885002E4F22 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E2CD6CF31EA9E885002E4F22 = {
+			isa = PBXGroup;
+			children = (
+				E2CD6CFE1EA9E885002E4F22 /* LoginLogoutKata */,
+				E2CD6D131EA9E885002E4F22 /* LoginLogoutKataTests */,
+				E2CD6CFD1EA9E885002E4F22 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E2CD6CFD1EA9E885002E4F22 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E2CD6CFC1EA9E885002E4F22 /* LoginLogoutKata.app */,
+				E2CD6D101EA9E885002E4F22 /* LoginLogoutKataTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E2CD6CFE1EA9E885002E4F22 /* LoginLogoutKata */ = {
+			isa = PBXGroup;
+			children = (
+				E2CD6CFF1EA9E885002E4F22 /* AppDelegate.swift */,
+				E2CD6D011EA9E885002E4F22 /* ViewController.swift */,
+				E2CD6D031EA9E885002E4F22 /* Main.storyboard */,
+				E2CD6D061EA9E885002E4F22 /* Assets.xcassets */,
+				E2CD6D081EA9E885002E4F22 /* LaunchScreen.storyboard */,
+				E2CD6D0B1EA9E885002E4F22 /* Info.plist */,
+			);
+			path = LoginLogoutKata;
+			sourceTree = "<group>";
+		};
+		E2CD6D131EA9E885002E4F22 /* LoginLogoutKataTests */ = {
+			isa = PBXGroup;
+			children = (
+				E2CD6D141EA9E885002E4F22 /* LoginLogoutKataTests.swift */,
+				E2CD6D161EA9E885002E4F22 /* Info.plist */,
+			);
+			path = LoginLogoutKataTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E2CD6CFB1EA9E885002E4F22 /* LoginLogoutKata */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2CD6D191EA9E885002E4F22 /* Build configuration list for PBXNativeTarget "LoginLogoutKata" */;
+			buildPhases = (
+				E2CD6CF81EA9E885002E4F22 /* Sources */,
+				E2CD6CF91EA9E885002E4F22 /* Frameworks */,
+				E2CD6CFA1EA9E885002E4F22 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LoginLogoutKata;
+			productName = LoginLogoutKata;
+			productReference = E2CD6CFC1EA9E885002E4F22 /* LoginLogoutKata.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E2CD6D0F1EA9E885002E4F22 /* LoginLogoutKataTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2CD6D1C1EA9E885002E4F22 /* Build configuration list for PBXNativeTarget "LoginLogoutKataTests" */;
+			buildPhases = (
+				E2CD6D0C1EA9E885002E4F22 /* Sources */,
+				E2CD6D0D1EA9E885002E4F22 /* Frameworks */,
+				E2CD6D0E1EA9E885002E4F22 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E2CD6D121EA9E885002E4F22 /* PBXTargetDependency */,
+			);
+			name = LoginLogoutKataTests;
+			productName = LoginLogoutKataTests;
+			productReference = E2CD6D101EA9E885002E4F22 /* LoginLogoutKataTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E2CD6CF41EA9E885002E4F22 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = EventMarketingExperience;
+				TargetAttributes = {
+					E2CD6CFB1EA9E885002E4F22 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = 2HZ94W43L6;
+						ProvisioningStyle = Automatic;
+					};
+					E2CD6D0F1EA9E885002E4F22 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = 2HZ94W43L6;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E2CD6CFB1EA9E885002E4F22;
+					};
+				};
+			};
+			buildConfigurationList = E2CD6CF71EA9E885002E4F22 /* Build configuration list for PBXProject "LoginLogoutKata" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E2CD6CF31EA9E885002E4F22;
+			productRefGroup = E2CD6CFD1EA9E885002E4F22 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E2CD6CFB1EA9E885002E4F22 /* LoginLogoutKata */,
+				E2CD6D0F1EA9E885002E4F22 /* LoginLogoutKataTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E2CD6CFA1EA9E885002E4F22 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2CD6D0A1EA9E885002E4F22 /* LaunchScreen.storyboard in Resources */,
+				E2CD6D071EA9E885002E4F22 /* Assets.xcassets in Resources */,
+				E2CD6D051EA9E885002E4F22 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2CD6D0E1EA9E885002E4F22 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E2CD6CF81EA9E885002E4F22 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2CD6D021EA9E885002E4F22 /* ViewController.swift in Sources */,
+				E2CD6D001EA9E885002E4F22 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2CD6D0C1EA9E885002E4F22 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2CD6D151EA9E885002E4F22 /* LoginLogoutKataTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E2CD6D121EA9E885002E4F22 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2CD6CFB1EA9E885002E4F22 /* LoginLogoutKata */;
+			targetProxy = E2CD6D111EA9E885002E4F22 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E2CD6D031EA9E885002E4F22 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2CD6D041EA9E885002E4F22 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E2CD6D081EA9E885002E4F22 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2CD6D091EA9E885002E4F22 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E2CD6D171EA9E885002E4F22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E2CD6D181EA9E885002E4F22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E2CD6D1A1EA9E885002E4F22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2HZ94W43L6;
+				INFOPLIST_FILE = LoginLogoutKata/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eme.LoginLogoutKata;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E2CD6D1B1EA9E885002E4F22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2HZ94W43L6;
+				INFOPLIST_FILE = LoginLogoutKata/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eme.LoginLogoutKata;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		E2CD6D1D1EA9E885002E4F22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 2HZ94W43L6;
+				INFOPLIST_FILE = LoginLogoutKataTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eme.LoginLogoutKataTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LoginLogoutKata.app/LoginLogoutKata";
+			};
+			name = Debug;
+		};
+		E2CD6D1E1EA9E885002E4F22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 2HZ94W43L6;
+				INFOPLIST_FILE = LoginLogoutKataTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eme.LoginLogoutKataTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LoginLogoutKata.app/LoginLogoutKata";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E2CD6CF71EA9E885002E4F22 /* Build configuration list for PBXProject "LoginLogoutKata" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2CD6D171EA9E885002E4F22 /* Debug */,
+				E2CD6D181EA9E885002E4F22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2CD6D191EA9E885002E4F22 /* Build configuration list for PBXNativeTarget "LoginLogoutKata" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2CD6D1A1EA9E885002E4F22 /* Debug */,
+				E2CD6D1B1EA9E885002E4F22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E2CD6D1C1EA9E885002E4F22 /* Build configuration list for PBXNativeTarget "LoginLogoutKataTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2CD6D1D1EA9E885002E4F22 /* Debug */,
+				E2CD6D1E1EA9E885002E4F22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E2CD6CF41EA9E885002E4F22 /* Project object */;
+}
