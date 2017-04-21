@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9E2010A2E4B9A92135CDF0E5 /* Pods_LoginLogoutKataTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0619651EC0AE779C027A76C7 /* Pods_LoginLogoutKataTests.framework */; };
+		E236AD321EAA404B006666FD /* SessionApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E236AD311EAA404B006666FD /* SessionApiClient.swift */; };
 		E2CD6D001EA9E885002E4F22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CD6CFF1EA9E885002E4F22 /* AppDelegate.swift */; };
 		E2CD6D021EA9E885002E4F22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CD6D011EA9E885002E4F22 /* ViewController.swift */; };
 		E2CD6D051EA9E885002E4F22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2CD6D031EA9E885002E4F22 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 		0619651EC0AE779C027A76C7 /* Pods_LoginLogoutKataTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginLogoutKataTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9555591F6F7F8A790BA5385F /* Pods_LoginLogoutKata.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginLogoutKata.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C45E7850FCA9F7538A4B5135 /* Pods-LoginLogoutKataTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginLogoutKataTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoginLogoutKataTests/Pods-LoginLogoutKataTests.release.xcconfig"; sourceTree = "<group>"; };
+		E236AD311EAA404B006666FD /* SessionApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionApiClient.swift; sourceTree = "<group>"; };
 		E2CD6CFC1EA9E885002E4F22 /* LoginLogoutKata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginLogoutKata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2CD6CFF1EA9E885002E4F22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2CD6D011EA9E885002E4F22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				E2CD6D061EA9E885002E4F22 /* Assets.xcassets */,
 				E2CD6D081EA9E885002E4F22 /* LaunchScreen.storyboard */,
 				E2CD6D0B1EA9E885002E4F22 /* Info.plist */,
+				E236AD311EAA404B006666FD /* SessionApiClient.swift */,
 			);
 			path = LoginLogoutKata;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E236AD321EAA404B006666FD /* SessionApiClient.swift in Sources */,
 				E2CD6D021EA9E885002E4F22 /* ViewController.swift in Sources */,
 				E2CD6D001EA9E885002E4F22 /* AppDelegate.swift in Sources */,
 			);
