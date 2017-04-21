@@ -9,7 +9,9 @@
 import XCTest
 import Nimble
 
-@testable import LoginLogoutKata
+@testable import Pods_LoginLogoutKataTests
+
+// TODO: Make mock executor as andorid approach
 
 class MockLogInCallback: LogInCompletionHandler {
     var onSuccessInvoked = false
