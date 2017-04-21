@@ -15,7 +15,7 @@ class MockLogInCallback: LogInCompletionHandler {
     var onSuccessInvoked = false
     var onErrorInvoked = false
     
-    func onLogInSuccess() {
+    func onLogInSuccess(email: String) {
         onSuccessInvoked = true
     }
     

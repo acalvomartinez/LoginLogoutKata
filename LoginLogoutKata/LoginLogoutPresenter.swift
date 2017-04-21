@@ -11,14 +11,20 @@ import Foundation
 class LoginLogoutPresenter {
     var sessionApiClient: SessionAPI
     var view: LoginView
+    var sessionStorage: SessionStorage
     
-    init(sessionApiClient: SessionAPI, view: LoginView) {
+    init(sessionApiClient: SessionAPI, view: LoginView, sessionStorage: SessionStorage) {
         self.sessionApiClient = sessionApiClient
         self.view = view
+        self.sessionStorage = sessionStorage
     }
     
     func viewDidLoad() {
-        view.isLogOutButtonHidden = true
+        if (sessionStorage.getUser() != nil) {
+            view.isLogOutButtonHidden = true
+        } else {
+            view.isLogInFormHidden = true
+        }
     }
     
     func didPressLoginButton(email: String, pass: String) {
@@ -35,12 +41,15 @@ extension LoginLogoutPresenter: LogInCompletionHandler {
     func onLogInError() {
         view.showError(message: "You missed email or password. Try again.") {
             self.view.isLogInFormEnabled = true;
+            self.sessionStorage.saveUser(email: nil)
         }
     }
     
-    func onLogInSuccess() {
+    func onLogInSuccess(email: String) {
         view.isLogOutButtonHidden = false
         view.isLogInFormHidden = true
+        
+        sessionStorage.saveUser(email: email)
     }
 }
 
@@ -54,5 +63,7 @@ extension LoginLogoutPresenter: LogOutCompletionHandler {
     func onLogOutSuccess() {
         view.isLogOutButtonHidden = true
         view.isLogInFormHidden = false
+        view.isLogInFormEnabled = true
+        view.resetLogInForm()
     }
 }

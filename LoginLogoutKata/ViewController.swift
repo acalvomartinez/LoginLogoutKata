@@ -8,13 +8,6 @@
 
 import UIKit
 
-protocol LoginView {
-    var isLogInFormHidden: Bool { get set }
-    var isLogInFormEnabled: Bool { get set }
-    var isLogOutButtonHidden: Bool { get set }
-    func showError(message: String, completion: @escaping ()->())
-}
-
 class ViewController: UIViewController {
 
     @IBOutlet weak var logoutButton: UIButton!
@@ -28,7 +21,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter = LoginLogoutPresenter(sessionApiClient: SessionAPI(clock: Date()), view: self)
+        presenter = LoginLogoutPresenter(sessionApiClient: SessionAPI(clock: Date()), view: self, sessionStorage: UserDefaultsSessionStorage())
         presenter.viewDidLoad()
     }
 
@@ -74,13 +67,19 @@ extension ViewController: LoginView {
     }
     
     func showError(message: String, completion: @escaping ()->()) {
-        let alert = UIAlertController(title: "LoginLogOut", message: message, preferredStyle: .alert)
+        let alert = UIAlertController(title: "LoginKata", message: message, preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "Aceptar", style: .default, handler: nil)
         alert.addAction(alertAction)
         
         self.present(alert, animated: true) {
             completion()
         }
+    }
+    
+    func resetLogInForm() {
+        emailTextField.text = ""
+        passTextField.text = ""
+        loginButton.isEnabled = true
     }
 }
 

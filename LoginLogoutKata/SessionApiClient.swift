@@ -9,7 +9,7 @@
 import Foundation
 
 protocol LogInCompletionHandler {
-    func onLogInSuccess()
+    func onLogInSuccess(email: String)
     func onLogInError()
 }
 
@@ -34,7 +34,7 @@ class SessionAPI {
         DispatchQueue.global(qos: .background).asyncAfter(deadline: DispatchTime.now() + 1) {
             if (email == "toni" && pass == "1234") {
                 DispatchQueue.main.async {
-                    return completion.onLogInSuccess()
+                    return completion.onLogInSuccess(email: email)
                 }
             } else {
                 DispatchQueue.main.async {

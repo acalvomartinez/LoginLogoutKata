@@ -11,6 +11,11 @@
 		E236AD321EAA404B006666FD /* SessionApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E236AD311EAA404B006666FD /* SessionApiClient.swift */; };
 		E236AD331EAA5B2A006666FD /* SessionApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E236AD311EAA404B006666FD /* SessionApiClient.swift */; };
 		E236AD351EAA65CB006666FD /* LoginLogoutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E236AD341EAA65CB006666FD /* LoginLogoutPresenter.swift */; };
+		E236AD371EAA6C82006666FD /* LoginLogoutPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E236AD361EAA6C82006666FD /* LoginLogoutPresenterTests.swift */; };
+		E236AD3B1EAA6D78006666FD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E236AD3A1EAA6D78006666FD /* LoginView.swift */; };
+		E236AD3C1EAA6D91006666FD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E236AD3A1EAA6D78006666FD /* LoginView.swift */; };
+		E236AD3F1EAA7436006666FD /* SessionStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E236AD3E1EAA7436006666FD /* SessionStorage.swift */; };
+		E236AD401EAA764E006666FD /* SessionStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E236AD3E1EAA7436006666FD /* SessionStorage.swift */; };
 		E2CD6D001EA9E885002E4F22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CD6CFF1EA9E885002E4F22 /* AppDelegate.swift */; };
 		E2CD6D021EA9E885002E4F22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CD6D011EA9E885002E4F22 /* ViewController.swift */; };
 		E2CD6D051EA9E885002E4F22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2CD6D031EA9E885002E4F22 /* Main.storyboard */; };
@@ -35,6 +40,9 @@
 		C45E7850FCA9F7538A4B5135 /* Pods-LoginLogoutKataTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginLogoutKataTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoginLogoutKataTests/Pods-LoginLogoutKataTests.release.xcconfig"; sourceTree = "<group>"; };
 		E236AD311EAA404B006666FD /* SessionApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionApiClient.swift; sourceTree = "<group>"; };
 		E236AD341EAA65CB006666FD /* LoginLogoutPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginLogoutPresenter.swift; sourceTree = "<group>"; };
+		E236AD361EAA6C82006666FD /* LoginLogoutPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginLogoutPresenterTests.swift; sourceTree = "<group>"; };
+		E236AD3A1EAA6D78006666FD /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		E236AD3E1EAA7436006666FD /* SessionStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionStorage.swift; sourceTree = "<group>"; };
 		E2CD6CFC1EA9E885002E4F22 /* LoginLogoutKata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginLogoutKata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2CD6CFF1EA9E885002E4F22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2CD6D011EA9E885002E4F22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +93,26 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E236AD431EAA849F006666FD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E2CD6D061EA9E885002E4F22 /* Assets.xcassets */,
+				E2CD6D0B1EA9E885002E4F22 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E236AD441EAA84C5006666FD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E2CD6D011EA9E885002E4F22 /* ViewController.swift */,
+				E236AD3A1EAA6D78006666FD /* LoginView.swift */,
+				E2CD6D031EA9E885002E4F22 /* Main.storyboard */,
+				E2CD6D081EA9E885002E4F22 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		E2CD6CF31EA9E885002E4F22 = {
 			isa = PBXGroup;
 			children = (
@@ -109,13 +137,11 @@
 			isa = PBXGroup;
 			children = (
 				E2CD6CFF1EA9E885002E4F22 /* AppDelegate.swift */,
-				E2CD6D011EA9E885002E4F22 /* ViewController.swift */,
-				E2CD6D031EA9E885002E4F22 /* Main.storyboard */,
-				E2CD6D061EA9E885002E4F22 /* Assets.xcassets */,
-				E2CD6D081EA9E885002E4F22 /* LaunchScreen.storyboard */,
-				E2CD6D0B1EA9E885002E4F22 /* Info.plist */,
-				E236AD311EAA404B006666FD /* SessionApiClient.swift */,
+				E236AD441EAA84C5006666FD /* View */,
 				E236AD341EAA65CB006666FD /* LoginLogoutPresenter.swift */,
+				E236AD311EAA404B006666FD /* SessionApiClient.swift */,
+				E236AD3E1EAA7436006666FD /* SessionStorage.swift */,
+				E236AD431EAA849F006666FD /* Supporting Files */,
 			);
 			path = LoginLogoutKata;
 			sourceTree = "<group>";
@@ -123,6 +149,7 @@
 		E2CD6D131EA9E885002E4F22 /* LoginLogoutKataTests */ = {
 			isa = PBXGroup;
 			children = (
+				E236AD361EAA6C82006666FD /* LoginLogoutPresenterTests.swift */,
 				E2CD6D141EA9E885002E4F22 /* LoginLogoutKataTests.swift */,
 				E2CD6D161EA9E885002E4F22 /* Info.plist */,
 			);
@@ -288,6 +315,8 @@
 				E236AD351EAA65CB006666FD /* LoginLogoutPresenter.swift in Sources */,
 				E236AD321EAA404B006666FD /* SessionApiClient.swift in Sources */,
 				E2CD6D021EA9E885002E4F22 /* ViewController.swift in Sources */,
+				E236AD3B1EAA6D78006666FD /* LoginView.swift in Sources */,
+				E236AD3F1EAA7436006666FD /* SessionStorage.swift in Sources */,
 				E2CD6D001EA9E885002E4F22 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +326,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E236AD331EAA5B2A006666FD /* SessionApiClient.swift in Sources */,
+				E236AD371EAA6C82006666FD /* LoginLogoutPresenterTests.swift in Sources */,
+				E236AD3C1EAA6D91006666FD /* LoginView.swift in Sources */,
+				E236AD401EAA764E006666FD /* SessionStorage.swift in Sources */,
 				E2CD6D151EA9E885002E4F22 /* LoginLogoutKataTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
