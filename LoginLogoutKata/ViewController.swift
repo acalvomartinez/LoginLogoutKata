@@ -8,6 +8,13 @@
 
 import UIKit
 
+protocol LoginView {
+    var isLogInFormHidden: Bool { get set }
+    var isLogInFormEnabled: Bool { get set }
+    var isLogOutButtonHidden: Bool { get set }
+    func showError(message: String, completion: @escaping ()->())
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var logoutButton: UIButton!
@@ -17,65 +24,64 @@ class ViewController: UIViewController {
     @IBOutlet weak var logInViewContainer: UIStackView!
     
     var isUserLogged: Bool = false;
-    let sessionApiClient = SessionAPI.init(clock: Date())
+    var presenter: LoginLogoutPresenter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        logoutButton.isHidden = !UserDefaults.standard.bool(forKey: "isLoggedUser")
-        logInViewContainer.isHidden = UserDefaults.standard.bool(forKey: "isLoggedUser")
+        presenter = LoginLogoutPresenter(sessionApiClient: SessionAPI(clock: Date()), view: self)
+        presenter.viewDidLoad()
     }
 
     @IBAction func loginButtonPressed(_ sender: Any) {
-        loginButton.isEnabled = false
-        emailTextField.isEnabled = false
-        passTextField.isEnabled = false
-        sessionApiClient.login(email: self.emailTextField.text!, pass: self.passTextField.text!, completion: self)
+        presenter.didPressLoginButton(email: self.emailTextField.text!, pass: self.passTextField.text!)
     }
     
     @IBAction func logoutButtonPressed(_ sender: Any) {
-        sessionApiClient.logout(completion: self)
+        presenter.didPressLogoutButton()
     }
 }
 
-extension ViewController: LogInCompletionHandler {
-    func onLogInError() {
-        let alert = UIAlertController(title: "LoginLogOut", message: "Error", preferredStyle: .alert)
+extension Date: Clock { }
+
+extension ViewController: LoginView {
+    var isLogInFormHidden: Bool {
+        get {
+            return logInViewContainer.isHidden
+        }
+        set {
+            logInViewContainer.isHidden = newValue
+        }
+    }
+    
+    var isLogInFormEnabled: Bool {
+        get {
+            return loginButton.isEnabled
+        }
+        set {
+            loginButton.isEnabled = newValue
+            emailTextField.isEnabled = newValue
+            passTextField.isEnabled = newValue
+        }
+    }
+    
+    var isLogOutButtonHidden: Bool {
+        get {
+            return logoutButton.isHidden
+        }
+        set {
+            logoutButton.isHidden = newValue
+        }
+    }
+    
+    func showError(message: String, completion: @escaping ()->()) {
+        let alert = UIAlertController(title: "LoginLogOut", message: message, preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "Aceptar", style: .default, handler: nil)
         alert.addAction(alertAction)
         
-        self.present(alert, animated: true) { 
-            self.loginButton.isEnabled = true
-            self.emailTextField.isEnabled = true
-            self.passTextField.isEnabled = true
+        self.present(alert, animated: true) {
+            completion()
         }
-        
-        UserDefaults.standard.set(false, forKey: "isLoggedUser")
-    }
-    
-    func onLogInSuccess() {
-        logoutButton.isHidden = false
-        logInViewContainer.isHidden = true
-        UserDefaults.standard.set(true, forKey: "isLoggedUser")
     }
 }
 
-extension ViewController: LogOutCompletionHandler {
-    func onLogOutError() {
-        logoutButton.isHidden = false
-        
-        UserDefaults.standard.set(true, forKey: "isLoggedUser")
-    }
-    
-    func onLogOutSuccess() {
-        logoutButton.isHidden = true
-        logInViewContainer.isHidden = false
-        emailTextField.text = ""
-        passTextField.text = ""
-        UserDefaults.standard.set(false, forKey: "isLoggedUser")
-    }
-}
 
-extension Date: Clock {
-    
-}
