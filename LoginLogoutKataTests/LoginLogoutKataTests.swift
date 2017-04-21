@@ -7,14 +7,32 @@
 //
 
 import XCTest
+import Nimble
+
 @testable import LoginLogoutKata
+
+class MockLogInCallback: LogInCompletionHandler {
+    var onSuccessInvoked = false
+    var onErrorInvoked = false
+    
+    func onLogInSuccess() {
+        onSuccessInvoked = true
+    }
+    
+    func onLogInError() {
+        onErrorInvoked = true
+    }
+}
 
 class LoginLogoutKataTests: XCTestCase {
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        XCTAssertTrue(true)
+    func testLoginFailsIfTheUserIsEmpty() {
+        let sessionAPI = SessionAPI()
+        let mockLogInCompletion = MockLogInCallback()
+        
+        sessionAPI.login(email: "", pass: "1234", completion: mockLogInCompletion)
+        
+        expect(mockLogInCompletion.onErrorInvoked).toEventually(beTrue())
     }
     
 }
