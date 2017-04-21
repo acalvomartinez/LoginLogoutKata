@@ -18,10 +18,21 @@ protocol LogOutCompletionHandler {
     func onLogOutError()
 }
 
+protocol Clock {
+    var timeIntervalSinceNow: TimeInterval { get }
+}
+
 class SessionAPI {
+    
+    let clock: Clock
+    
+    init(clock: Clock) {
+        self.clock = clock
+    }
+    
     func login(email: String, pass: String, completion: LogInCompletionHandler) {
-        DispatchQueue.global(qos: .background).async {
-            if (email == "toni") {
+        DispatchQueue.global(qos: .background).asyncAfter(deadline: DispatchTime.now() + 1) {
+            if (email == "toni" && pass == "1234") {
                 DispatchQueue.main.async {
                     return completion.onLogInSuccess()
                 }
@@ -35,7 +46,7 @@ class SessionAPI {
     }
     
     func logout(completion: LogOutCompletionHandler) {
-        let time = Int(Date().timeIntervalSinceNow)
+        let time = Int(clock.timeIntervalSinceNow)
         return (time % 2 == 0) ? completion.onLogOutSuccess() : completion.onLogOutError()
     }
 }

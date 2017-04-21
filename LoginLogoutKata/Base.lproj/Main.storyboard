@@ -95,6 +95,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="Yoj-li-G3A" id="JVh-mI-6Ui"/>
                         <outlet property="logInViewContainer" destination="TvZ-Bg-xQP" id="aHx-Bb-vKe"/>
+                        <outlet property="loginButton" destination="6pU-xZ-yB0" id="SEM-lL-76p"/>
                         <outlet property="logoutButton" destination="UEe-vj-JFR" id="Sqz-mN-5Es"/>
                         <outlet property="passTextField" destination="m9g-bT-TCr" id="ZYx-f7-fDh"/>
                     </connections>

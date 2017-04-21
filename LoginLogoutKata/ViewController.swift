@@ -11,12 +11,13 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var logoutButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passTextField: UITextField!
     @IBOutlet weak var logInViewContainer: UIStackView!
     
     var isUserLogged: Bool = false;
-    let sessionApiClient = SessionAPI()
+    let sessionApiClient = SessionAPI.init(clock: Date())
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func loginButtonPressed(_ sender: Any) {
+        loginButton.isEnabled = false
+        emailTextField.isEnabled = false
+        passTextField.isEnabled = false
         sessionApiClient.login(email: self.emailTextField.text!, pass: self.passTextField.text!, completion: self)
     }
     
@@ -40,7 +44,11 @@ extension ViewController: LogInCompletionHandler {
         let alertAction = UIAlertAction(title: "Aceptar", style: .default, handler: nil)
         alert.addAction(alertAction)
         
-        self.present(alert, animated: true, completion: nil)
+        self.present(alert, animated: true) { 
+            self.loginButton.isEnabled = true
+            self.emailTextField.isEnabled = true
+            self.passTextField.isEnabled = true
+        }
         
         UserDefaults.standard.set(false, forKey: "isLoggedUser")
     }
@@ -66,4 +74,8 @@ extension ViewController: LogOutCompletionHandler {
         passTextField.text = ""
         UserDefaults.standard.set(false, forKey: "isLoggedUser")
     }
+}
+
+extension Date: Clock {
+    
 }
